@@ -7,10 +7,22 @@
 
     <title>{{ $title ?? 'Page Title' }}</title>
     @vite('resources/css/app.css')
-    
+
 </head>
 
 <body>
+    @if (session('register_success'))
+        <div x-data="{ show: true }" x-show="show" x-transition.duration.500ms
+            class="fixed top-5 right-5 bg-gray-900 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-3">
+
+            <span>{{ session('register_success') }}</span>
+
+            <button @click="show = false" class="text-white font-bold">
+                &times;
+            </button>
+        </div>
+    @endif
+    
     {{ $slot }}
 
     <script>

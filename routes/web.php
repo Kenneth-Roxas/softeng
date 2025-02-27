@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Auth\Activities;
+use App\Livewire\Auth\Admin\AdminDash;
 use App\Livewire\Auth\Announcement;
 use App\Livewire\Auth\Contact;
 use App\Livewire\Auth\FAQ;
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
+// SK Officers UI
+Route::get('/SK-Officers', AdminDash::class);
 
 // Navigation
 Route::get('/', HomePage::class)->name('home');
