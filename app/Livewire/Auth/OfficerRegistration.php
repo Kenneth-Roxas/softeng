@@ -2,14 +2,12 @@
 
 namespace App\Livewire\Auth;
 
-
 use Livewire\Component;
 
-
-class Register extends Component
+class OfficerRegistration extends Component
 {
     public function render()
     {
-        return view('livewire.auth.register');
+        return view('livewire.auth.officer-registration');
     }
 }

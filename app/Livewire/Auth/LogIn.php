@@ -15,11 +15,13 @@ class LogIn extends Component
         ]);
 
         if (Auth::attempt($check)){
-            return redirect()->route('home');
+            return redirect()->route('home')->with('login_success', 'You have successfully logged in!');
+
         }
         else {
             session()->flash('login_failed', 'Invalid Email or Password!');
         }
+
     }
     public function render()
     {

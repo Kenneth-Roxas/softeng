@@ -7,7 +7,8 @@
 
     <title>{{ $title ?? 'Page Title' }}</title>
     @vite('resources/css/app.css')
-
+    @livewireStyles
+    @livewireScripts    
 </head>
 
 <body>
@@ -22,6 +23,20 @@
             </button>
         </div>
     @endif
+
+    @if (session('login_success'))
+        <div x-data="{ show: true }" x-show="show" x-transition.duration.500ms
+            class="fixed top-5 right-5 bg-green-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-3 z-50">
+
+            <span>{{ session('login_success') }}</span>
+
+            <button @click="show = false" class="text-white font-bold">
+                &times;
+            </button>
+        </div>
+    @endif
+
+
     
     {{ $slot }}
 

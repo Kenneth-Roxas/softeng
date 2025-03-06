@@ -9,6 +9,7 @@ use App\Livewire\Auth\HomePage;
 use App\Livewire\Auth\LogIn;
 use App\Livewire\Auth\ProfilingForm;
 use App\Livewire\Auth\Register;
+use App\Livewire\Auth\YouthRegistration;
 use Illuminate\Support\Facades\Route;
 
 // Route::get('/', function () {
@@ -29,6 +30,7 @@ Route::get('/faqs', FAQ::class)->name('FAQ');
 
 Route::get('/login', LogIn::class)->name('login');
 Route::get('/register', Register::class)->name('register');
+Route::get('youthRegistration', YouthRegistration::class)->name('youth');
 
 // Profiling
 Route::get('/profiling', ProfilingForm::class)->name('profiling');

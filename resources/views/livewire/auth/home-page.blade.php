@@ -1,7 +1,9 @@
 <div>
     {{-- If you look to others for fulfillment, you will never truly be fulfilled. --}}
+    
+
     <header
-        class='flex shadow-2xl py-3 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-50'>
+        class='flex shadow-2xl py-3 px-4 sm:px-10 bg-white font-[sans-serif] min-h-[70px] tracking-wide relative z-40'>
         <div class='flex flex-wrap items-center justify-between lg:gap-y-4 gap-y-6 gap-x-4 w-full'>
             <a href="javascript:void(0)"><img
                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Sangguniang_Kabataan_logo.svg/1200px-Sangguniang_Kabataan_logo.svg.png"
@@ -9,9 +11,9 @@
             </a>
 
             <div id="collapseMenu"
-                class='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-50'>
+                class='max-lg:hidden lg:!block max-lg:before:fixed max-lg:before:bg-black max-lg:before:opacity-40 max-lg:before:inset-0 max-lg:before:z-40'>
                 <button id="toggleClose"
-                    class='lg:hidden fixed top-2 right-4 z-[100] rounded-full bg-white w-9 h-9 flex items-center justify-center border'>
+                    class='lg:hidden fixed top-2 right-4 z-[90] rounded-full bg-white w-9 h-9 flex items-center justify-center border'>
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 fill-black"
                         viewBox="0 0 320.591 320.591">
                         <path
@@ -24,7 +26,7 @@
                 </button>
 
                 <ul
-                    class='lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-2/3 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-4 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-50'>
+                    class='lg:flex lg:gap-x-10 max-lg:space-y-3 max-lg:fixed max-lg:bg-white max-lg:w-2/3 max-lg:min-w-[300px] max-lg:top-0 max-lg:left-0 max-lg:p-4 max-lg:h-full max-lg:shadow-md max-lg:overflow-auto z-40'>
                     <li class='mb-6 hidden max-lg:block'>
                         <a href="javascript:void(0)"><img
                                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Sangguniang_Kabataan_logo.svg/1200px-Sangguniang_Kabataan_logo.svg.png"
