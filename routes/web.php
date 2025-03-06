@@ -7,6 +7,7 @@ use App\Livewire\Auth\Contact;
 use App\Livewire\Auth\FAQ;
 use App\Livewire\Auth\HomePage;
 use App\Livewire\Auth\LogIn;
+use App\Livewire\Auth\OfficerRegistration;
 use App\Livewire\Auth\ProfilingForm;
 use App\Livewire\Auth\Register;
 use App\Livewire\Auth\YouthRegistration;
@@ -30,7 +31,12 @@ Route::get('/faqs', FAQ::class)->name('FAQ');
 
 Route::get('/login', LogIn::class)->name('login');
 Route::get('/register', Register::class)->name('register');
-Route::get('youthRegistration', YouthRegistration::class)->name('youth');
+Route::get('/youthRegistration', YouthRegistration::class)->name('youth');
+Route::get('/officerRegistration', OfficerRegistration::class)->name('officers');
+
 
 // Profiling
 Route::get('/profiling', ProfilingForm::class)->name('profiling');
+
+// Officers
+Route::get('/officer_Dashboard', AdminDash::class)->name('officer_dash');

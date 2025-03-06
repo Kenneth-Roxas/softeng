@@ -18,16 +18,21 @@
                 <p class="mt-2 text-lg text-white dark:text-gray-300">
                     Select whether you are registering as a <strong>Youth</strong> or an <strong>SK Officer</strong>.
                 </p>
-                <div class="flex justify-center items-center space-x-4 pt-6">
-                    <a href="{{ route('youth')}}"><button id="chooseYouthBtn" type="button"
-                        class="py-2 px-4 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-primary-300">
-                        Youth
-                    </button></a>
-                    <button id="chooseSKBtn" type="button"
-                        class="py-2 px-4 text-base font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300">
-                        SK Officers
-                    </button>
-                </div>
+                <div class="flex justify-center items-center gap-4 pt-6">
+                    <a href="{{ route('youth') }}">
+                        <button id="chooseYouthBtn" type="button"
+                            class="py-2 px-4 text-base font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 h-12">
+                            Youth
+                        </button>
+                    </a>
+                    <a href="{{ route('officers') }}">
+                        <button id="chooseSKBtn" type="button"
+                            class="py-2 px-4 text-base font-medium text-white bg-red-600 rounded-lg hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-red-300 h-12 flex flex-col justify-center items-center leading-tight">
+                            SK Officers 
+                            <span class="text-xs mt-1 opacity-80 text-center">(SK-Officer only)</span>
+                        </button>
+                    </a>                    
+                </div>                
             </div>
         </div>
     </div>
