@@ -1,6 +1,7 @@
 <div>
     {{-- Be like water. --}}
 
+    @section('title', 'Login')
     <div class="font-[sans-serif] max-w-7xl mx-auto h-screen">
         @if (session()->has('login_failed'))
             <div x-data="{ show: true }" x-show="show" x-transition.duration.500ms
@@ -14,7 +15,7 @@
             </div>
         @endif
         <div class="grid md:grid-cols-2 items-center gap-8 h-full">
-            <form wire:submit.prevent='login' class="max-w-lg max-md:mx-auto w-full p-6">
+            <form action="{{ route('login.button') }}" method="POST" class="max-w-lg max-md:mx-auto w-full p-6">
                 @csrf
                 <div class="mb-12">
                     <h3 class="text-gray-800 text-4xl font-bold">Sign in</h3>
@@ -25,7 +26,7 @@
                 <div>
                     <label class="text-gray-800 text-[15px] mb-2 block">Email</label>
                     <div class="relative flex items-center">
-                        <input wire:model="email" type="text"
+                        <input name="email" type="text"
                             class="w-full text-sm text-gray-800 bg-gray-100 focus:bg-transparent pl-4 pr-10 py-3 rounded-md border border-gray-100 focus:border-blue-600 outline-none transition-all"
                             placeholder="Enter email" />
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb"
@@ -53,7 +54,7 @@
                 <div class="mt-4">
                     <label class="text-gray-800 text-[15px] mb-2 block">Password</label>
                     <div class="relative flex items-center">
-                        <input wire:model="password" type="password"
+                        <input name="password" type="password"
                             class="w-full text-sm text-gray-800 bg-gray-100 focus:bg-transparent pl-4 pr-10 py-3 rounded-md border border-gray-100 focus:border-blue-600 outline-none transition-all"
                             placeholder="Enter password" />
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb"

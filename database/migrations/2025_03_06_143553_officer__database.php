@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('officer_users', function (Blueprint $table) {
             $table->id();
             $table->string('officer_name');
-            $table->string('position');
+            $table->string('position')->nullable();
             $table->string('officer_email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('barangay_assign');

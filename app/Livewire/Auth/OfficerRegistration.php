@@ -10,11 +10,11 @@ use Hash;
 
 class OfficerRegistration extends Component
 {
-    public $officer_name, $position, $officer_email, $barangay_assign, $officer_password, $officer_password_confirmation, $officer_condition;
+    public $officer_surname, $officer_name, $position, $officer_email, $barangay_assign, $officer_password, $officer_password_confirmation, $officer_condition;
 
     protected $rules = [
         'officer_name' => 'required|min:2',
-        'position' => 'required|min:2',
+        'position' => 'nullable|string',
         'officer_email' => 'required|email|unique:officer_users,officer_email',
         'barangay_assign' => 'required|min:2',
         'officer_password' => 'required|min:8|confirmed',

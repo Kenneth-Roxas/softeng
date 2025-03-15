@@ -4,11 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>{{ $title ?? 'Page Title' }}</title>
+    <title>@yield('title', 'Sangguniang Kabataan')</title>
     @vite('resources/css/app.css')
     @livewireStyles
-    @livewireScripts    
+
 </head>
 
 <body>
@@ -36,8 +35,31 @@
         </div>
     @endif
 
+    @if (session('login_failed'))
+        <div x-data="{ show: true }" x-show="show" x-transition.duration.500ms
+            class="fixed top-5 right-5 bg-red-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-3 z-50">
 
-    
+            <span>{{ session('login_failed') }}</span>
+
+            <button @click="show = false" class="text-white font-bold">
+                &times;
+            </button>
+        </div>
+    @endif
+
+    @if (session('login_first'))
+        <div x-data="{ show: true }" x-show="show" x-transition.duration.500ms
+            class="fixed top-5 right-5 bg-red-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center space-x-3 z-50">
+
+            <span>{{ session('login_first') }}</span>
+
+            <button @click="show = false" class="text-white font-bold">
+                &times;
+            </button>
+        </div>
+    @endif
+
+    @livewire('navigationbar')
     {{ $slot }}
 
     <script>
@@ -70,6 +92,7 @@
             dropdownMenu.classList.add('hidden');
         });
     </script>
+    @livewireScripts
 </body>
 
 </html>

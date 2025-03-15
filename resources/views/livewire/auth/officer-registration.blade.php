@@ -15,11 +15,11 @@
                 </div>
 
                 <div>
-                    <label class="text-gray-800 text-base block mb-2">Officer Name</label>
+                    <label class="text-gray-800 text-base block mb-2">Officer Name/Organization</label>
                     <div class="relative flex items-center">
                         <input wire:model="officer_name" type="text"
                             class="w-full bg-transparent text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 pl-2 pr-8 py-3 outline-none"
-                            placeholder="Enter name" />
+                            placeholder="Enter name or organization (e.g Municipal Federation)" />
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb"
                             class="w-[18px] h-[18px] absolute right-2" viewBox="0 0 24 24">
                             <circle cx="10" cy="7" r="6" data-original="#000000"></circle>
@@ -33,12 +33,12 @@
                     @enderror
                 </div>
 
-                <div class="mt-8">
+                <div class="mt-4">
                     <label class="text-gray-800 text-base block mb-2">Position</label>
                     <div class="relative flex items-center">
                         <input wire:model="position" type="text"
                             class="w-full bg-transparent text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 pl-2 pr-8 py-3 outline-none"
-                            placeholder="Enter Position" />
+                            placeholder="Enter Position (leave blank if organization)" />
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#bbb" stroke="#bbb"
                             class="w-[18px] h-[18px] absolute right-2" viewBox="0 0 24 24">
 
@@ -60,7 +60,7 @@
                     @enderror
                 </div>
 
-                <div class="mt-8">
+                <div class="mt-4">
                     <label class="text-gray-800 text-base block mb-2">Email</label>
                     <div class="relative flex items-center">
                         <input wire:model="officer_email" type="text"
@@ -88,8 +88,8 @@
                     @enderror
                 </div>
 
-                <div class="mt-8">
-                    <label class="text-gray-800 text-base block mb-2">Barangay Assign</label>
+                <div class="mt-4">
+                    <label class="text-gray-800 text-base block mb-2">Municipal/Barangay Assign</label>
                     <div class="relative flex items-center">
                         <input wire:model="barangay_assign" type="text"
                             class="w-full bg-transparent text-sm text-gray-800 border-b border-gray-300 focus:border-blue-500 pl-2 pr-8 py-3 outline-none"
@@ -106,7 +106,7 @@
                     @enderror
                 </div>
 
-                <div class="mt-8">
+                <div class="mt-4">
                     <label class="text-gray-800 text-base block mb-2">Password</label>
                     <div class="relative flex items-center">
                         <input wire:model="officer_password" type="password"
@@ -124,7 +124,7 @@
                     @enderror
                 </div>
 
-                <div class="mt-8">
+                <div class="mt-4">
                     <label class="text-gray-800 text-base block mb-2">Password Confirmation</label>
                     <div class="relative flex items-center">
                         <input wire:model="officer_password_confirmation" type="password"
@@ -143,7 +143,7 @@
                 </div>
 
 
-                <div class="flex items-center mt-8">
+                <div class="flex items-center mt-4">
                     <input id="remember-me" wire:model="officer_condition" type="checkbox"
                         class="h-4 w-4 shrink-0 rounded" />
                     <label for="remember-me" class="ml-3 block text-sm">
@@ -155,7 +155,7 @@
                     <p class="mt-2 text-sm text-red-600">{{ $message }}</p>
                 @enderror
 
-                <div class="mt-8">
+                <div class="mt-4">
                     <button type="submit"
                         class="w-full shadow-xl py-2.5 px-4 text-sm font-semibold tracking-wider rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none transition-all">
                         Register

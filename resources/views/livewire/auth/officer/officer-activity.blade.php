@@ -1,7 +1,8 @@
 <div>
-    {{-- Because she competes with no one, no one can compete with her. --}}
+    {{-- To attain knowledge, add things every day; To attain wisdom, subtract things every day. --}}
 
     @section('title', 'SK Activities')
+    
     
 
     <div class="max-w-md mx-auto bg-white shadow-lg rounded-2xl overflow-hidden border border-gray-500 mt-4">
@@ -110,113 +111,6 @@
             </div>
         </div>
     </div>
-
-
-    <div class="max-w-md mx-auto bg-white shadow-lg rounded-2xl overflow-hidden border border-gray-500 mt-4">
-        <!-- Post Header -->
-        <div class="p-4 flex items-center">
-            <img class="w-10 h-10 rounded-full"
-                src="{{ asset('Images/sta-elena.jpg')}}"
-                alt="User Avatar">
-            <div class="ml-3">
-                <h3 class="text-sm font-semibold text-gray-900">SK - Sta. Elena</h3>
-                <span class="text-xs text-gray-500">December 22, 2024</span>
-            </div>
-        </div>
-        <!-- Image Carousel -->
-        <div x-data="{
-            images: ['{{ asset('Images/act3.jpg')}}',
-            '{{ asset('Images/act4.jpg')}}',
-            '{{ asset('Images/act5.jpg')}}'
-             ],
-            currentIndex: 0
-        }" class="relative">
-            <img :src="images[currentIndex]" class="w-full h-80 object-cover transition-all duration-500"
-                alt="Post Image">
-            <!-- Left Arrow -->
-            <button @click="currentIndex = currentIndex > 0 ? currentIndex - 1 : images.length - 1"
-                class="absolute left-2 top-1/2 transform -translate-y-1/2 text-white rounded-full p-2 opacity-75 hover:opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                </svg>
-            </button>
-
-            <!-- Right Arrow -->
-            <button @click="currentIndex = currentIndex < images.length - 1 ? currentIndex + 1 : 0"
-                class="absolute right-2 top-1/2 transform -translate-y-1/2 text-white rounded-full p-2 opacity-75 hover:opacity-100">
-                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                </svg>
-            </button>
-        </div>
-
-        <!-- Post Content -->
-        <div class="p-4">
-            <div x-data="{ expanded: false }">
-                <p class="text-gray-800 text-sm">
-                    <span x-show="!expanded">
-                        the Sangguniang Kabataan (SK) Chairpersons from the Municipality of Virac had their family day
-                        event titled SKamustahan...
-                    </span>
-                    <span x-show="expanded">
-                        The youth of Sta. Elena show the true meaning of teamwork and community
-                        spirit by helping the Barangay Council clean the Covered Court. Together, they worked hard to
-                        keep the
-                        court clean and safe for everyone to use. Their efforts show their care for the community and
-                        their
-                        willingness to help make their barangay a better place.
-                    </span>
-                </p>
-                <button @click="expanded = !expanded" class="text-blue-500 text-sm mt-1">
-                    <span x-show="!expanded">See More</span>
-                    <span x-show="expanded">See Less</span>
-                </button>
-            </div>
-
-
-            {{-- <p class="text-gray-800 text-sm">The youth of Sta. Elena show the true meaning of teamwork and community
-                spirit by helping the Barangay Council clean the Covered Court. Together, they worked hard to keep the
-                court clean and safe for everyone to use. Their efforts show their care for the community and their
-                willingness to help make their barangay a better place.
-            </p> --}}
-            <div class="mt-3 flex items-center justify-between text-gray-500 text-sm">
-                <div class="flex items-center space-x-2">
-                    <button class="flex items-center space-x-1 hover:text-red-700">
-                        <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20"
-                                height="20">
-                                <path fill="currentColor"
-                                    d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
-                            </svg>
-                        </span>
-                    </button>
-                    <button class="flex items-center space-x-1 hover:text-blue-500">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M21 12.5a8.5 8.5 0 1 0-3 6.5l3 1-1-3a8.5 8.5 0 0 0 1-4.5z" />
-                            </svg>
-                        </span>
-                    </button>
-                    <button class="flex items-center space-x-1 hover:text-blue-500">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M20 6V3h-3" />
-                                <path d="M3 12a9 9 0 0 1 15-6.7L20 6" />
-                                <path d="M4 18v3h3" />
-                                <path d="M21 12a9 9 0 0 1-15 6.7L4 18" />
-                            </svg>
-                        </span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x/dist/cdn.min.js" defer></script>
 </div>
